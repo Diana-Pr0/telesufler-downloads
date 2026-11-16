@@ -1,5 +1,5 @@
 const CACHE = 'telesufler-offline-49402dfe938dfab6'
-const FILES = ["apple-touch-icon.png","assets/index-D7TfMywY.js","assets/index-DqCRBtfY.css","favicon.svg","icons.svg","index.html","manifest.webmanifest","telesufler-mark.svg"]
+const FILES = ["apple-touch-icon.png","index-D7TfMywY.js","index-DqCRBtfY.css","favicon.svg","icons.svg","index.html","manifest.webmanifest","telesufler-mark.svg"]
 const root = self.registration.scope
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES.map(path => new Request(new URL(path, root), {cache:'reload'})))))
